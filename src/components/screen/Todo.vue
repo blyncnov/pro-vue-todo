@@ -16,7 +16,7 @@
   </div>
 
   <div class="Output__Container" v-if="DbTodo.length < 1">
-    <h2>No Messages</h2>
+    <h2>No Messages .</h2>
   </div>
 
   <div
