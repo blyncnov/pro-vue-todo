@@ -5,12 +5,7 @@
     <div>
       <form class="input__container">
         <input type="text" name="screen" id="screen" v-model="TodoMessage" />
-        <button
-          @keyup.f1.prevent="AddTodo(TodoMessage)"
-          @click.prevent="AddTodo(TodoMessage)"
-        >
-          Add
-        </button>
+        <button @click.prevent="AddTodo(TodoMessage)">Add</button>
       </form>
     </div>
   </div>
