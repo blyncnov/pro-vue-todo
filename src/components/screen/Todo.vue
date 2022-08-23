@@ -16,17 +16,10 @@
   </div>
 
   <div class="Output__Container" v-if="DbTodo.length < 1">
-    <h2>No Messages .</h2>
+    <h2>No Messages</h2>
   </div>
 
-  <div
-    class="Output__Container"
-    v-for="todo in DbTodo"
-    :key="todo.id"
-    :draggable="draggable"
-    @dragstart="dragStart"
-    @dragover.stop
-  >
+  <div class="Output__Container" v-for="todo in DbTodo" :key="todo.id">
     <div class="box">
       <h4>{{ todo.message }}</h4>
       <h3 @click="deleteTodoHandler(todo.id)">x</h3>
@@ -72,10 +65,6 @@ export default {
       const FindSpecificData = this.DbTodo.filter((todo) => todo.id !== id);
       this.DbTodo = FindSpecificData;
       localStorage.setItem("Todo", JSON.stringify(this.DbTodo));
-    },
-
-    drop: (e) => {
-      console.log(e);
     },
   },
 };
